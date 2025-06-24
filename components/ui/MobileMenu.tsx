@@ -31,13 +31,16 @@ function MobileMenu() {
             <Link href="#beneficios" className="text-lg font-medium text-navy-800 hover:text-navy-600" onClick={() => setOpen(false)}>
               Beneficios
             </Link>
+            <Link href="#demo" className="text-lg font-medium text-navy-800 hover:text-navy-600" onClick={() => setOpen(false)}>
+              Demo
+            </Link>
+            <Link href="#quienes-somos" className="text-lg font-medium text-navy-800 hover:text-navy-600" onClick={() => setOpen(false)}>
+              Quiénes somos
+            </Link>
             <Link href="#contacto" className="text-lg font-medium text-navy-800 hover:text-navy-600" onClick={() => setOpen(false)}>
               Contacto
             </Link>
-            <Link href="#" className="text-lg font-medium text-navy-800 hover:text-navy-600" onClick={() => setOpen(false)}>
-              Iniciar sesión
-            </Link>
-            <Link href="#" className="text-lg font-medium text-white bg-navy-700 rounded px-4 py-2 text-center hover:bg-navy-800 transition-colors" onClick={() => setOpen(false)}>
+            <Link href="#contacto" className="text-lg font-medium text-white bg-navy-700 rounded px-4 py-2 text-center hover:bg-navy-800 transition-colors" onClick={() => setOpen(false)}>
               Probar gratis
             </Link>
           </nav>

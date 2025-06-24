@@ -13,6 +13,8 @@ export default function LandingPage() {
   const hero = useInView()
   // Beneficios
   const beneficios = useInView()
+  // Demo
+  const demo = useInView()
   // Quiénes somos
   const quienes = useInView()
   // Contacto
@@ -96,6 +98,13 @@ export default function LandingPage() {
               className="text-sm font-medium text-navy-800 hover:text-navy-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 rounded"
             >
               Beneficios
+            </a>
+            <a
+              href="#demo"
+              onClick={handleSmoothScroll}
+              className="text-sm font-medium text-navy-800 hover:text-navy-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 rounded"
+            >
+              Demo
             </a>
             <a
               href="#quienes-somos"
@@ -228,7 +237,7 @@ export default function LandingPage() {
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">Beneficios clave para tu agencia</h2>
               <p className="text-lg text-navy-700 max-w-2xl mx-auto">
-                Diseñado específicamente para agencias de viajes que crean experiencias personalizadas
+                Diseñado específicamente para agencias de viajes que crean experiencias personalizadas.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -258,6 +267,39 @@ export default function LandingPage() {
                 <h3 className="text-xl font-semibold text-navy-900 mb-3">Ahorro de tiempo en tareas repetitivas</h3>
                 <p className="text-navy-700">
                   Automatiza el proceso de cotización para dedicar más tiempo a lo que realmente importa: tus clientes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Demo Section */}
+        <section ref={demo.ref} id="demo" className={`py-16 md:py-24 bg-gray-50 transition-all duration-700 ${demo.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="container">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">Demo de la plataforma</h2>
+              <p className="text-lg text-navy-700 max-w-3xl mx-auto">
+                Mirá un video de cómo Iterio puede transformar la forma en que creas tus cotizaciones.
+              </p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-full max-w-4xl bg-white p-4 rounded-xl shadow-lg border border-gray-200">
+                <div className="aspect-w-16 aspect-h-9">
+                  <iframe
+                    className="w-full h-full rounded-lg min-h-[480px]"
+                    src="https://www.loom.com/embed/8aa8c4b5551e4b9fad0c2594b1b9d598?sid=ca13fc5d-ee45-4fe1-b60b-6bf50a4e9a07&hideEmbedTopBar=true&hide_owner=true&hide_speed=true"
+                    title="Loom video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen>
+                  </iframe>
+                </div>
+              </div>
+              <div className="mt-6 text-center text-navy-700">
+                <p className="text-sm">
+                  <span className="font-semibold">Última actualización:</span> 23/06/2025
+                </p>
+                <p className="text-xs mt-2 max-w-2xl mx-auto">
+                  Este video es una demostración de la versión actual de la plataforma. Trabajamos constantemente en mejoras y nuevas funcionalidades, por lo que la versión que pruebes puede tener características adicionales.
                 </p>
               </div>
             </div>
@@ -315,7 +357,7 @@ export default function LandingPage() {
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">¿Tenes alguna pregunta?</h2>
                 <p className="text-lg text-navy-700">
-                  Completa el formulario y nuestro equipo se pondrá en contacto contigo a la brevedad
+                  Completa el formulario y nuestro equipo se pondrá en contacto contigo a la brevedad.
                 </p>
               </div>
               <form 
